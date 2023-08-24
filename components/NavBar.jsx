@@ -1,29 +1,29 @@
 import React from "react";
 import { Menu, MenuButton, MenuList, MenuItem, Box, Spacer, Flex } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
+import "./styles.css"
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="navbar-container">
       <Flex>
-        <Box p="4">
-          <h3>Lupe-Store</h3>
+        <Box className="titulo-navbar">
+          <h2>Lupe-Store</h2>
         </Box>
         <Spacer />
-        <Box p="4">
-          <Menu>
-            <MenuButton>Categorys</MenuButton>
+        <Box p="6" className="desplegable-navbar">
+          <Menu >
+            <MenuButton className="menu-desplegable">Productos</MenuButton>
             <MenuList>
-              <MenuItem>Category A</MenuItem>
-              <MenuItem>Category B</MenuItem>
-              <MenuItem>Category C</MenuItem>
-              <MenuItem>Category D</MenuItem>
-              <MenuItem>Attend a Workshop</MenuItem>
+              <MenuItem>Mate 1</MenuItem>
+              <MenuItem>Mate 2</MenuItem>
+              <MenuItem>Mate 3</MenuItem>
+              <MenuItem>Mate 4</MenuItem>
             </MenuList>
           </Menu>
         </Box>
         <Spacer />
-        <Box p='4'>
+        <Box p='4' className="carrito-navbar">
       <CartWidget/>
       </Box>
       </Flex>

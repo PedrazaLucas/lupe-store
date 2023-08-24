@@ -1,0 +1,27 @@
+.navbar-container{
+    background-color: aqua;
+    width: auto;
+    height: auto;
+}
+
+.titulo-navbar{
+    padding: 2px;
+    margin: 2px;
+}
+
+.desplegable-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-desplegable{
+    border: 1px solid black;
+    background: aqua;
+}

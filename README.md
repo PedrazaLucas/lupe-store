@@ -1,8 +1,6 @@
-# React + Vite
+# MI PROYECTO DE REACT
+## Lucas Pedraza
+### Comision 55750,  React JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Primera pre-entrega del proyecto final. Estoy muy emocionado de poder hacer esta entrega, vengo muy conectado con el curso gracias al profe que es un genio total y a los tutores. 
+Mi proyecto va a consistir de una Ecommerce en la que se venden mates. En esta entrega presento el Navbar y un componente ItemListConteiner.
