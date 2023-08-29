@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.menu-desplegable{
+button{
     border: 1px solid black;
     background: aqua;
 }

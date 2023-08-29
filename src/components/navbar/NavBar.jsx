@@ -6,7 +6,7 @@ import "./styles.css"
 const NavBar = () => {
   return (
     <div className="navbar-container">
-      <Flex>
+      <Flex p={5}>
         <Box className="titulo-navbar">
           <h2>Lupe-Store</h2>
         </Box>

@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Flex, Box, Divider } from "@chakra-ui/react";
 
 const CartWidget = () => {
@@ -7,7 +6,7 @@ const CartWidget = () => {
     <div>
       <Flex>
         <Box>
-          <ArrowForwardIcon />
+        <span class="material-symbols-outlined">shopping_cart</span>
         </Box>
         <Divider/>
         <Box>
