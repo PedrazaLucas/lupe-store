@@ -1,47 +1,48 @@
 import React from 'react'
 import {
     Card,
-    Image,
-    Stack,
     Text,
     CardBody,
-    Button,
     CardFooter,
+    CardHeader,
+    Heading,
+    Center,
+    Image
   } from "@chakra-ui/react";
 import ItemCount from './ItemCount';
+import {useParams} from 'react-router-dom'
 
+const ItemDetail = ({productos}) => {
+  const {id} = useParams()
 
-const ItemDetail = ({product}) => {
+const filteredProducts = productos.filter((producto)=>producto.id == id)
+
   return (
     <div>
-        <Card
-        
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline"
-      >
-        <Image
-          w="20%"
-          objectFit="cover"
-          maxW={{ base: "30%", sm: "50px" }}
-          src={product.image}
-          alt="Caffe Latte"
-        />
 
-        <Stack w="20%" p="10px">
-          <CardBody>
-          <Text py="2">Descripcion: {product.description}</Text>
-          <Text py="2">$ {product.price}</Text>
-          </CardBody>
-
-          <CardFooter>
-            <Button variant="solid" colorScheme="blue">
-              Detalle
-            </Button>
-          </CardFooter>
-        </Stack>
-      </Card>
-      <ItemCount/>
+    {filteredProducts.map((p)=> {
+        return(
+          <div key={p.id}> 
+          <Center p='1rem'>
+  
+            <Card>
+              <CardHeader>
+              <Image src={p.image} boxSize="30%"/>
+                  <Heading size='md'>{p.nombre}</Heading>
+              </CardHeader>
+              <CardBody>
+                <Text>{p.descripcion}</Text>
+                <Text>${p.precio}</Text>
+              </CardBody>
+              <CardFooter>
+                <ItemCount/>
+              </CardFooter>
+            </Card>
+          </Center>
+          </div>
+        )
+      })
+    }
     </div>
   )
 }

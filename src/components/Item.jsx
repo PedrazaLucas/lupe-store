@@ -9,39 +9,41 @@ import {
   Button,
   CardFooter,
   Heading,
+  Divider,
+  ButtonGroup
 } from "@chakra-ui/react";
+import {Link} from 'react-router-dom'
 
 const Item = ({ producto }) => {
   console.log(producto);
   return (
     <div>
-      <Card
-        
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline"
-      >
-        <Image
-          w="20%"
-          objectFit="cover"
-          maxW={{ base: "30%", sm: "50px" }}
-          src={producto.image}
-          alt="Caffe Latte"
-        />
-
-        <Stack w="20%" p="10px">
-          <CardBody>
-            <Heading size="md">{producto.title}</Heading>
-          </CardBody>
-
-          <CardFooter>
-            <Button variant="solid" colorScheme="blue">
-              Detalle
-            </Button>
-          </CardFooter>
-        </Stack>
-      </Card>
-      <ItemCount/>
+      <Card maxW='sm'>
+  <CardBody>
+    <Image
+      src={producto.image}
+      boxSize="50%"
+    />
+    <Stack mt='6' spacing='3'>
+      <Heading size='md'>{producto.nombre}</Heading>
+      <Text>
+      </Text>
+      <Text color='blue.600' fontSize='2xl'>
+      </Text>
+    </Stack>
+  </CardBody>
+  <Divider />
+  <CardFooter>
+    <ButtonGroup spacing='2'>
+      <Button variant='solid' colorScheme='blue' size="lg">
+        <Link to={`/item/${producto.id}`}>
+        Detalle
+        </Link>
+      </Button>
+    </ButtonGroup>
+  </CardFooter>
+</Card>
+      
     </div>
   );
 };
